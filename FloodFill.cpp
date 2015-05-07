@@ -179,8 +179,7 @@ void ImgGray(byte *pBuf, int &gray, int &hsv) {
 	gray = (PR(pBuf) * 38 + PG(pBuf) * 75 + PB(pBuf) * 15) >> 7;
 }
 
-#define max(a, b)	(a < b ? b : a)
-#define min(a, b)	(a > b ? b : a)
+
 
 
 int getDist(byte *pBuf, byte *pBuf1) {
@@ -198,8 +197,8 @@ int getDist(byte *pBuf, byte *pBuf1) {
 		imax = g;
 		imin = b;
 	}
-	imax = max(imax, max(b, 0));
-	imin = min(imin, min(b, 0));
+	imax = MAX(imax, MAX(b, 0));
+	imin = MIN(imin, MIN(b, 0));
 
 	dist = imax - imin;
 	return dist;
@@ -300,4 +299,8 @@ int FloodFill(byte *imgSrc, int width, int height, int cx, int cy, int th) {
 	}
 	return 0;
 }
+
+
+
+
 
