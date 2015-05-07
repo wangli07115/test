@@ -1,0 +1,31 @@
+#ifndef ___FILTER_ENGINE_BASE_FILTER_FILTER_VERSION_1P_H___
+#define ___FILTER_ENGINE_BASE_FILTER_FILTER_VERSION_1P_H___
+
+enum effectType{
+   EFFECT_TYPE_NONE = 0,
+   EFFECT_TYPE_MAROON = 1,
+   EFFECT_TYPE_BW = 2,
+   EFFECT_TYPE_FILM = 3,
+   EFFECT_TYPE_OXIDIZE = 4,
+   EFFECT_TYPE_LEAF = 5,
+   EFFECT_TYPE_VIOLET = 6,
+   EFFECT_TYPE_LIGHT_YELLOW = 7,
+   EFFECT_TYPE_AZURE = 8,
+   EFFECT_TYPE_VIRIDITY = 9,
+   EFFECT_TYPE_WOOD = 10,
+   EFFECT_TYPE_PALE_GREEN = 11,
+   EFFECT_TYPE_FADING = 12,
+   EFFECT_TYPE_CORNFIED = 13,
+   EFFECT_TYPE_OLIVE_YELLOW = 14,
+   EFFECT_TYPE_TOY = 15,
+   EFFECT_TYPE_PALE_BLUE = 16,
+   EFFECT_TYPE_CLAY_BANK = 17,
+   EFFECT_TYPE_SUNNY = 18,
+   EFFECT_TYPE_MAX,
+};
+
+void newFilters(unsigned char *image, int width, int height, int depth, int stride, int type);
+
+void LoadTableRGB(unsigned char *table, int stepr, int stepg, int stepb, int type);
+
+#endif/*___FILTER_ENGINE_BASE_FILTER_FILTER_VERSION_1P_H___*/
